@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PÔLE DE L’ETUDIANT ENTREPRENEUR DE SFAX{% endblock %}
+
+{% block body %}
+<section class="hero-section-wrapper-2 mb-100">
+
+{{ include('shared/_menu.html.twig') }}
+  <!-- ========================= hero-2 start ========================= -->
+  <div class="hero-section hero-style-2">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-lg-6">
+          <div class="hero-content-wrapper">
+            <h4>Étudiant et Entrepreneur, c'est possible!</h4>
+            <h2 class="mb-30">Rejoignez la communauté des étudiants entrepreneurs de Sfax</h2>
+            <p class="mb-50">Inscrivez-vous et commencez un programme!</p>
+            <div class="buttons">
+              <a href="#0" class="button button-lg radius-10">Inscription</a>
+              <a href="#" class="video-button glightbox"> <span class="icon"><i class="lni lni-play"></i></span> <span>Découvrir Le Statut Étudiant Entrepreneur</span> </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <img src="assets/img/hero/hero-2/hero-img.svg" alt="">
+            <img src="assets/img/hero/hero-2/paattern.svg" alt="" class="shape shape-2">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========================= hero-2 end ========================= -->
+
+</section>
+<script>
+
+  // ============= video popup
+  GLightbox({
+    'href': 'assets/video/video_home.mp4',
+    'type': 'video',
+    'source': 'local', //vimeo, youtube or local
+    'width': 900,
+    'autoplayVideos': true,
+  });
+
+  // header-2  toggler-icon
+  let navbarToggler2 = document.querySelector(".header-2 .navbar-toggler");
+  var navbarCollapse2 = document.querySelector(".header-2 .navbar-collapse");
+
+  document.querySelectorAll(".header-2 .page-scroll").forEach(e =>
+      e.addEventListener("click", () => {
+          navbarToggler2.classList.remove("active");
+          navbarCollapse2.classList.remove('show')
+      })
+  );
+  navbarToggler2.addEventListener('click', function() {
+      navbarToggler2.classList.toggle("active");
+  })
+</script>
+{% endblock %}
